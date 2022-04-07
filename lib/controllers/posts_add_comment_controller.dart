@@ -23,6 +23,7 @@ class PostsAddCommentController extends GetxController {
     final comment = Post(id: 0, userId: 0, title: title, body: body);
     try {
       final response = await dio.post(kTestAssignLink, data: comment.toJson());
+      debugPrint(response.toString());
     } catch (e) {
       debugPrint(e.toString());
     }
