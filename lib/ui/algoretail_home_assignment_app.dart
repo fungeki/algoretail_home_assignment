@@ -9,12 +9,13 @@ class AlgoRetailHomeAssignmentApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData(scaffoldBackgroundColor: Colors.orangeAccent),
       initialRoute: kInitialPostsPageRouteName,
       getPages: [
         GetPage(
           name: kInitialPostsPageRouteName,
           page: () {
-            return const PostsDisplayPage();
+            return PostsDisplayPage();
           },
         ),
       ],
