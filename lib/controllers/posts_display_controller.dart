@@ -9,7 +9,13 @@ class PostsDisplayController extends GetxController {
 
   void getPosts() async {
     final firstPost = posts.length + 1;
-    final lastPost = firstPost + 20;
+    if (firstPost > 100) {
+      return; //the website has a limit of 100 posts
+    }
+    int lastPost = firstPost + 20;
+    if (lastPost > 100) {
+      lastPost = 100;
+    }
     final getWwwRequest =
         kJsonUrlRoot + 'posts?_start=$firstPost&_end=$lastPost';
     final dio = Dio(BaseOptions(contentType: 'application/json'));
