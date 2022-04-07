@@ -1,6 +1,7 @@
 import 'package:algoretail_home_assignment/models/post.dart';
 import 'package:algoretail_home_assignment/utils/constants.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class PostsDisplayController extends GetxController {
@@ -27,7 +28,7 @@ class PostsDisplayController extends GetxController {
       posts.refresh();
       refresh();
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
     }
   }
 }

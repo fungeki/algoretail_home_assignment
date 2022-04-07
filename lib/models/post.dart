@@ -16,6 +16,12 @@ class Post {
       body: json["body"],
     );
   }
+  Map<String, dynamic> toJson() => {
+        'id': id ?? 0,
+        'userID': userId ?? 0,
+        'title': title ?? '',
+        'body': body ?? ''
+      };
 
   @override
   String toString() {
