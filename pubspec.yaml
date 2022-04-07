@@ -31,13 +31,16 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  dio: ^4.0.6
+  get: ^4.6.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  get: ^4.6.1
+
   flutter_lints: ^1.0.0
+
 
 flutter:
 
